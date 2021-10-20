@@ -1,0 +1,37 @@
+body
+{
+    background-color: rgb(230, 245, 240);
+}
+#sidebar
+{
+    min-height: 100vh;
+    background-color: rgb(19, 131, 94);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#content
+{
+    min-height: 100vh;
+    background-color: rgb(19, 131, 94);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.menu-list
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.menu-list > a
+{
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 10px rgb(15, 15, 15));
+}
+.card
+{
+    border-radius: 25px;
+}

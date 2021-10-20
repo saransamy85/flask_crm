@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+   
+    <title>Home</title>
+</head>
+<body>
+<div class="columns">
+  <div class="column is-2-desktop is-2-mobile is-2">
+    <div class="px-1" id="sidebar">
+      <div class="profile">
+        <img src="{{url_for('static',filename='images/user.png')}}">
+      </div>
+      <div class="menu-list">
+        <i class="fa fa-user" style="color: white;"><a href="{{url_for('dashboard')}}">Dashboard</a></i>
+        <a href="{{url_for('product')}}">Product</a>
+        <a href="{{url_for('sales')}}">sales</a>
+        <a href="{{url_for('lead')}}">Lead</a>
+        <a href="{{url_for('report')}}">Report</a>
+        <a href="#">setting</a>
+      </div>
+    </div>
+  </div>
+  <div class="column is-10-desktop is-10-mobile is-10">
+    <div class="px-1" id="content">
+      
+      <br>
+      <br>
+      {% block mycont %}
+      <div class="dashboard">
+        <div class="columns">
+          <div class="column">
+            <div class="px-1">
+              <div class="card is-vcentered">
+                Lead
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="px-1">
+              <div class="card">
+                Follow up
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="px-1">
+              <div class="card">
+                customers
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+</div>
+</body>
+</html>
